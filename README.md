@@ -1,5 +1,9 @@
 # Setup
 
+Clone this repository:
+
+`git clone {repo}`
+
 Install Composer Dependencies:
 
 `composer install`
@@ -8,7 +12,7 @@ Install NPM Dependencies:
 
 `npm install`
 
-Create a copy of your .env file:
+Create a copy of your .env file and Setting your database connection:
 
 `cp .env.example .env`
 
