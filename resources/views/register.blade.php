@@ -102,12 +102,11 @@ $(document).ready(function() {
                         Swal.fire({
                             type: 'success',
                             title: 'Register Berhasil!',
-                            text: 'Silahkan login!',
                             timer: 1000,
                             showCancelButton: false,
                             showConfirmButton: false
                         }).then(function() {
-                            window.location.href = "{{ route('login') }}";
+                            window.location.href = "{{ route('dashboard.index') }}";
                         });
                         $("#nama_lengkap").val('');
                         $("#email").val('');

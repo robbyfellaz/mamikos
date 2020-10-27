@@ -41,10 +41,11 @@ class RegisterController extends Controller
         ]);
 
         if($user) {
-            return response()->json([
-                'success' => true,
-                'message' => 'Register Berhasil!'
-            ], 201);
+            if(Auth::guard('web')->attempt(['email' => $email, 'password' => $password])) {
+                return response()->json([
+                    'success' => true
+                ], 200);
+            }
         } else {
             return response()->json([
                 'success' => false,
